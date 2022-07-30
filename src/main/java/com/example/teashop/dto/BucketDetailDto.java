@@ -19,10 +19,10 @@ public class BucketDetailDto {
     private Double sum;
 
     public BucketDetailDto(Product product){
-        this.title = product.getDetails().getTitle();
+        this.title = product.getTitle();
         this.productId = product.getId();
-        this.price = product.getDetails().getPrice();
+        this.price = product.getPrice();
         this.amount = 1.0;
-        this.sum = product.getDetails().getPrice();
+        this.sum = product.getPrice();
     }
 }

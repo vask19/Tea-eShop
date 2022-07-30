@@ -78,7 +78,7 @@ public class BucketServiceImpl implements BucketService{
             }
             else {
                 detail.setAmount(detail.getAmount() + 1.0);
-                detail.setSum(detail.getSum() + product.getDetails().getPrice());
+                detail.setSum(detail.getSum() + product.getPrice());
             }
         }
 

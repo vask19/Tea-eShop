@@ -8,20 +8,23 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
+
+
+//TODO
+//@Data
+//@AllArgsConstructor
+//@NoArgsConstructor
+//@Builder
 //@Entity
 public class ProductDetails {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private Double price;
-    private String title;
-
-
-    @OneToOne
-    private Product product;
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    private Long id;
+//    private Double price;
+//    private String title;
+//
+//
+//    @OneToOne
+//    private Product product;
 }

@@ -94,10 +94,13 @@ import java.util.Set;
 //}
 
 
-
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
+@ConstructorBinding
+@Builder
 @Entity
-
+@Table(name = "users")
 public class User implements UserDetails {
 
     @Id
@@ -110,6 +113,9 @@ public class User implements UserDetails {
 
     @Column
     private String password;
+
+    @OneToOne(mappedBy = "user", cascade = CascadeType.REMOVE)
+    private Bucket bucket;
 
     @ElementCollection(targetClass = ERole.class)
     @CollectionTable(name = "user_role",
@@ -130,10 +136,6 @@ public class User implements UserDetails {
         this.username = username;
         this.password = password;
         this.authorities = authorities;
-    }
-
-    public User() {
-
     }
 
     @Override

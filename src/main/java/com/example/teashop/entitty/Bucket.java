@@ -11,8 +11,8 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-//@Entity
-//@Table(name = "buckets")
+@Entity
+@Table(name = "buckets")
 public class Bucket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
